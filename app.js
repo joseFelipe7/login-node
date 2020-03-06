@@ -5,6 +5,8 @@ const app     = express();
 const loginRoute = require('./router/loginRoute');
 /**configurações */
 app.set('view engine', 'ejs');
+
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/assets'));
 
 

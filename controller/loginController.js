@@ -1,4 +1,5 @@
-const login = {
+const login = require('../model/Login')
+const loginController = {
     //renderiza a tela de login
     index:(req, res)=>{
         res.render('login');
@@ -6,7 +7,10 @@ const login = {
     //realiza o login do usuario
     logar:(req, res)=>{
         //implementar login
-        res.send('logou o/')
+        let email = req.body.email;
+        let senha = req.body.senha;
+        login.logar(email,senha)
+        res.send(`logou o/ ${email} ${senha}`)
     }
 }
-module.exports = login;
+module.exports = loginController;
