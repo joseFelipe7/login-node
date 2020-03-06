@@ -1,0 +1,15 @@
+
+.container{
+}
+.container-login{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    
+}
+.container-login form{
+    display: flex;
+    flex-direction: column;
+}
